@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { FAB } from "react-native-paper";
 import { globalStyles } from "../theme/global.styles";
 
@@ -24,16 +24,3 @@ export const CounterScreenM3 = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 80,
-    color: "black",
-    fontWeight: "300",
-  },
-});
