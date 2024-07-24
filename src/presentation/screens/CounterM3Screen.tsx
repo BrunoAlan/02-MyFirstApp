@@ -1,25 +1,26 @@
 import { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { PrimaryButton } from "../components/shared";
-import { Button } from "react-native-paper";
+import { FAB } from "react-native-paper";
+import { globalStyles } from "../theme/global.styles";
 
-export const CounterScreen = () => {
+export const CounterScreenM3 = () => {
   const [count, setCount] = useState(0);
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{count}</Text>
-      {/* <PrimaryButton
-        label="Increment"
-        onPress={() => setCount(count + 1)}
-        onLongPress={() => setCount(0)}
-      /> */}
-      <Button
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.title}>{count}</Text>
+      {/* <Button
         onPress={() => setCount(count + 1)}
         onLongPress={() => setCount(0)}
         mode="contained"
       >
         Increment
-      </Button>
+      </Button> */}
+      <FAB
+        style={globalStyles.fab}
+        icon={"plus"}
+        onPress={() => setCount(count + 1)}
+        onLongPress={() => setCount(0)}
+      />
     </View>
   );
 };
